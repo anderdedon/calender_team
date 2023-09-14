@@ -10,6 +10,17 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh_conect'
+    runOptions: 'commands'
+    commands: |
+      mkdir calender_project
+      
+      git clone https://github.com/anderdedon/calender_team.git
+      
+      cd /calender_team
+    readyTimeout: '20000'
 
 
 
