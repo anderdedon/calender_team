@@ -10,13 +10,28 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh_conect'
+    runOptions: 'commands'
+    commands: 'sudo npm install -g next'
+    readyTimeout: '10000'
+
 - task: SSH@0
   inputs:
     sshEndpoint: 'ssh_conect'
     runOptions: 'inline'
     inline: |
       git clone https://github.com/anderdedon/calender_team.git
+    readyTimeout: '15000'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh_conect'
+    runOptions: 'commands'
+    commands: 'cd calender_team/'
     readyTimeout: '20000'
+    
 
 
 
