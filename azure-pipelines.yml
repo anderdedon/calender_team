@@ -31,16 +31,13 @@ steps:
     runOptions: 'commands'
     commands: 'cd calender_team/'
     readyTimeout: '10000'
-    
+
 - task: SSH@0
   inputs:
     sshEndpoint: 'ssh_conect'
     runOptions: 'commands'
     commands: 'sudo npm run dev'
     readyTimeout: '30000'
-
-
-
 
 
 
