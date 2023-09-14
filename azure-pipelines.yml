@@ -15,6 +15,13 @@ steps:
   inputs:
     sshEndpoint: 'ssh_conect'
     runOptions: 'commands'
+    commands: 'sudo rm -r calender_team/'
+    readyTimeout: '20000'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh_conect'
+    runOptions: 'commands'
     commands: 'sudo npm install -g next'
     readyTimeout: '10000'
 
