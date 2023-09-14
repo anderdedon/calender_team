@@ -16,7 +16,7 @@ steps:
     sshEndpoint: 'ssh_conect'
     runOptions: 'commands'
     commands: 'sudo rm -r calender_team/'
-    readyTimeout: '20000'
+    readyTimeout: '5000'
 
 - task: SSH@0
   inputs:
