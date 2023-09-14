@@ -37,7 +37,7 @@ steps:
     sshEndpoint: 'ssh_conect'
     runOptions: 'commands'
     commands: 'cd calender_team/'
-    readyTimeout: '10000'
+    readyTimeout: '5000'
 
 - task: SSH@0
   inputs:
