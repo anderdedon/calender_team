@@ -19,7 +19,11 @@ steps:
       
       git clone https://github.com/anderdedon/calender_team.git
       
-      cd /calender_team
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh_conect'
+    runOptions: 'commands'
+    commands: 'cd /calender_team'
     readyTimeout: '20000'
 
 
