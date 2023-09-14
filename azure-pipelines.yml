@@ -15,8 +15,6 @@ steps:
     sshEndpoint: 'ssh_conect'
     runOptions: 'inline'
     inline: |
-      mkdir app_test
-      cd app_test
       git clone https://github.com/anderdedon/calender_team.git
     readyTimeout: '20000'
 
