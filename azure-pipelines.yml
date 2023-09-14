@@ -10,13 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: AWSShellScript@1
+- task: CmdLine@2
   inputs:
-    awsCredentials: 'connect_instance_lightsail'
-    regionName: 'us-east-1'
-    scriptType: 'inline'
-    inlineScript: |
+    script: |
       ssh anderfran@3.224.211.68
+      
       Senha@123
 
 
