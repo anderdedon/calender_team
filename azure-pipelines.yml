@@ -16,14 +16,14 @@ steps:
     sshEndpoint: 'ssh_conect'
     runOptions: 'commands'
     commands: 'git clone https://github.com/anderdedon/calender_team.git'
-    readyTimeout: '20000'
+    readyTimeout: '5000'
 
 - task: SSH@0
   inputs:
     sshEndpoint: 'ssh_conect'
     runOptions: 'commands'
     commands: 'cd /calender_team'
-    readyTimeout: '20000'
+    readyTimeout: '5000'
 
 
 
